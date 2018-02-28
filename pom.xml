@@ -16,7 +16,7 @@
         <sourceJdk>1.8</sourceJdk>
         <targetJdk>1.8</targetJdk>
         <github.account>wakaleo</github.account>
-        <thucydides.version>1.8.4</thucydides.version>
+        <thucydides.version>1.8.3</thucydides.version>
         <jelastic.context>gameoflife</jelastic.context>
         <jelastic.environment>wakaleo</jelastic.environment>
     </properties>
@@ -274,9 +274,8 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
-
                 <plugins>
-                   <plugin> 
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
                         <version>1.0</version>
@@ -296,6 +295,16 @@
                             </execution>
                         </executions>
                     </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-site-plugin</artifactId>
+                        <version>3.3</version>
+                        <configuration>
+                            <reportPlugins>
+                                <plugin>
+                                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                                    <version>2.7</version>
+                                </plugin>
                                 <plugin>
                                     <groupId>org.jacoco</groupId>
                                     <artifactId>jacoco-maven-plugin</artifactId>
@@ -358,8 +367,8 @@
                                     <groupId>org.apache.maven.plugins</groupId>
                                     <artifactId>maven-jxr-plugin</artifactId>
                                     <version>2.4</version>
+                                </plugin>
                             </reportPlugins>
-
                         </configuration>
                         <dependencies>
                             <dependency>
@@ -486,9 +495,9 @@
             </reporting>
         </profile>
     </profiles>
+</project>
 
-
-
+<project>
  <distributionManagement>
 
         <repository>
